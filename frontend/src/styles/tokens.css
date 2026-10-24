@@ -1,0 +1,189 @@
+/* Swiftradish theme bridge.
+ * BoardUI and shadcn read these semantic tokens. Ratios use the WCAG
+ * relative-luminance formula, calculated 24 Oct 2026.
+ *
+ * Light text #1C2430 on #FFFFFF is 15.62:1 and on #EEF3F1 is 13.93:1.
+ * Muted #5C6B74 on #FFFFFF is 5.51:1 and on #EEF3F1 is 4.91:1.
+ * Radish #C82E4A on #FFFFFF is 5.32:1 and on #EEF3F1 is 4.75:1.
+ * White on #C82E4A is 5.32:1.
+ * Leaf #2F6B4F on #FFFFFF is 6.29:1 and on #EEF3F1 is 5.61:1.
+ * Danger #B42318 on #FFFFFF is 6.57:1 and on #EEF3F1 is 5.86:1.
+ * Focus #8A5A00 on #FFFFFF is 5.93:1 and on #EEF3F1 is 5.29:1.
+ * Field edge #6E7F77 on #FFFFFF is 4.23:1 and on #EEF3F1 is 3.77:1.
+ *
+ * Dark text #F4F7F6 on #121816 is 16.68:1 and on #1C2622 is 14.43:1.
+ * Muted #9BB0A6 on #121816 is 7.84:1 and on #1C2622 is 6.78:1.
+ * Accent text #E9788C on #121816 is 6.45:1 and on #1C2622 is 5.58:1.
+ * Leaf #4EAF78 on #121816 is 6.62:1 and on #1C2622 is 5.72:1.
+ * Danger #F0A8A4 on #121816 is 9.28:1 and on #1C2622 is 8.03:1.
+ * Focus #E6A817 on #121816 is 8.54:1 and on #1C2622 is 7.39:1.
+ * Field edge #6A8076 on #1C2622 is 3.68:1 and on #121816 is 4.25:1.
+ */
+
+@theme {
+  --font-sans: "Source Sans 3 Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4 Variable", ui-serif, Georgia, serif;
+
+  --color-accent-50: #fdf4f6;
+  --color-accent-100: #f8e4e8;
+  --color-accent-200: #f0c5cc;
+  --color-accent-300: #e9788c;
+  --color-accent-400: #b22842;
+  --color-accent-500: #c82e4a;
+  --color-accent-600: #c82e4a;
+  --color-accent-700: #9a2438;
+  --color-accent-800: #7a1c2c;
+  --color-accent-900: #5c1420;
+  --color-accent-950: #3a0c14;
+
+  --text-body-regular: 1rem;
+  --text-body-regular--line-height: 1.5rem;
+  --text-body-medium: 1rem;
+  --text-body-medium--line-height: 1.5rem;
+  --text-body-semibold: 1rem;
+  --text-body-semibold--line-height: 1.5rem;
+  --text-body-bold: 1rem;
+  --text-body-bold--line-height: 1.5rem;
+
+  --radius-lg: 8px;
+  --radius-2lg: 8px;
+}
+
+:root {
+  --swiftradish-ink: #1c2430;
+  --swiftradish-mist: #eef3f1;
+  --swiftradish-paper: #ffffff;
+  --swiftradish-muted: #5c6b74;
+  --swiftradish-accent: #c82e4a;
+  --swiftradish-accent-text: #ffffff;
+  --swiftradish-positive: #2f6b4f;
+  --swiftradish-danger: #b42318;
+  --swiftradish-focus: #8a5a00;
+  --swiftradish-border: #6e7f77;
+  --swiftradish-link: #9a2438;
+  --swiftradish-mark: #c82e4a;
+  --swiftradish-duration: 200ms;
+
+  --color-text-primary: var(--swiftradish-ink);
+  --color-text-secondary: var(--swiftradish-muted);
+  --color-text-tertiary: var(--swiftradish-muted);
+  --color-text-placeholder: var(--swiftradish-muted);
+  --color-text-error-primary: var(--swiftradish-danger);
+  --color-foreground-icon-primary: var(--swiftradish-ink);
+  --color-foreground-icon-secondary: var(--swiftradish-muted);
+  --color-foreground-icon-error: var(--swiftradish-danger);
+  --color-background-full: var(--swiftradish-mist);
+  --color-background-primary-default: var(--swiftradish-paper);
+  --color-background-primary-hover: #e7eeeb;
+  --color-background-secondary-default: #e4ebe8;
+  --color-background-secondary-hover: #dbe4e0;
+  --color-avatar-neutral-background: #e4ebe8;
+  --color-border-button-default: var(--swiftradish-border);
+  --color-border-button-hover: var(--swiftradish-ink);
+  --color-border-error-default: var(--swiftradish-danger);
+  --color-separator-border: var(--swiftradish-border);
+  --color-border-focus-ring: var(--swiftradish-focus);
+  --color-state-success-text: var(--swiftradish-positive);
+  --color-background: var(--swiftradish-mist);
+  --color-foreground: var(--swiftradish-ink);
+  --color-card: var(--swiftradish-paper);
+  --color-primary: var(--swiftradish-accent);
+  --color-primary-foreground: var(--swiftradish-accent-text);
+  --color-muted-foreground: var(--swiftradish-muted);
+  --color-border: var(--swiftradish-border);
+  --color-ring: var(--swiftradish-focus);
+  --color-destructive: var(--swiftradish-danger);
+  color-scheme: light;
+}
+
+.dark {
+  --swiftradish-ink: #f4f7f6;
+  --swiftradish-mist: #121816;
+  --swiftradish-paper: #1c2622;
+  --swiftradish-muted: #9bb0a6;
+  --swiftradish-accent: #c82e4a;
+  --swiftradish-accent-text: #ffffff;
+  --swiftradish-positive: #4eaf78;
+  --swiftradish-danger: #f0a8a4;
+  --swiftradish-focus: #e6a817;
+  --swiftradish-border: #6a8076;
+  --swiftradish-link: #e9788c;
+  --swiftradish-mark: #e9788c;
+
+  --color-text-primary: var(--swiftradish-ink);
+  --color-text-secondary: var(--swiftradish-muted);
+  --color-text-tertiary: var(--swiftradish-muted);
+  --color-text-placeholder: var(--swiftradish-muted);
+  --color-text-error-primary: var(--swiftradish-danger);
+  --color-foreground-icon-primary: var(--swiftradish-ink);
+  --color-foreground-icon-secondary: var(--swiftradish-muted);
+  --color-foreground-icon-error: var(--swiftradish-danger);
+  --color-background-full: var(--swiftradish-mist);
+  --color-background-primary-default: var(--swiftradish-paper);
+  --color-background-primary-hover: #24302b;
+  --color-background-secondary-default: #18211e;
+  --color-avatar-neutral-background: #24302b;
+  --color-border-button-default: var(--swiftradish-border);
+  --color-border-button-hover: var(--swiftradish-ink);
+  --color-border-error-default: var(--swiftradish-danger);
+  --color-separator-border: var(--swiftradish-border);
+  --color-border-focus-ring: var(--swiftradish-focus);
+  --color-state-success-text: var(--swiftradish-positive);
+  --color-background: var(--swiftradish-mist);
+  --color-foreground: var(--swiftradish-ink);
+  --color-card: var(--swiftradish-paper);
+  --color-primary: var(--swiftradish-accent);
+  --color-primary-foreground: var(--swiftradish-accent-text);
+  --color-muted-foreground: var(--swiftradish-muted);
+  --color-border: var(--swiftradish-border);
+  --color-ring: var(--swiftradish-focus);
+  --color-destructive: var(--swiftradish-danger);
+  color-scheme: dark;
+}
+
+html {
+  background: var(--swiftradish-mist);
+  color: var(--swiftradish-ink);
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: var(--swiftradish-mist);
+  color: var(--swiftradish-ink);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+:focus-visible {
+  outline: 2px solid var(--swiftradish-focus);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 20;
+  border-radius: 8px;
+  background: var(--swiftradish-paper);
+  color: var(--swiftradish-ink);
+  padding: 0.5rem 0.75rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

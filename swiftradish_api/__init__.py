@@ -1,0 +1,1 @@
+"""Swiftradish API package."""
